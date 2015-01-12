@@ -1,12 +1,16 @@
+/* Custom CSS */
 
-
-#license { 
+.license { 
 			font-size: 11px; 
 			text-align: center;
-
+		 }
+		 
+.license img { 
+			margin: 10px;
 		 }
 
-/* From Bootstrap website: */
+
+/* CSS from Bootstrap website: */
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -25,8 +29,6 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 100px;
   background-color: #eee;
-  padding: 30px;
+  padding: 20px;
 }
