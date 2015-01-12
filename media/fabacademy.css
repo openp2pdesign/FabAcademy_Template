@@ -21,13 +21,14 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  /* Margin bottom by footer height + a 30px margin */
+  margin-bottom: 150px;
 }
 
 #footer {
   position: absolute;
   bottom: 0;
+  height: 120px;
   width: 100%;
   background-color: #eee;
   padding: 20px;

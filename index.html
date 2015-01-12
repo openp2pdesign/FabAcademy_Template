@@ -9,6 +9,8 @@
     <link rel="icon" href="media/favicon.ico">
 
     <title>Fab Academy 2015 - Name Surname</title>
+    
+    <script src="media/jquery-1.9.1.min.js"></script>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,64 +27,51 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <!-- Load the menu file -->
+    <script>
+	function menu() {
+					  $('#menu').load("menu.html");
+					  }
+	</script>
+
   </head>
 
-  <body>
+  <body onload="menu()">
 
-    <!-- Static navbar -->
-    <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Name Surname</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#about">About</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Excercises <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final project <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
+    <!-- The menu will be loaded here -->
+    <div id="menu">
+    </div>
 
     <div class="container">
 
-      <!-- Main component for a primary marketing message or call to action -->
+	<!-- Insert your content here below! -->
+
       <div class="jumbotron">
         <h1>Name Surname</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius aliquam augue. Aliquam fermentum ante eget ante dictum, sit amet venenatis quam pharetra. Cras ipsum justo, suscipit eget enim quis, fringilla bibendum metus. Etiam at quam commodo urna congue faucibus ac ac diam. Vestibulum ipsum nunc, tempus non varius non, volutpat vel nulla. Morbi eget scelerisque diam, sed congue justo. In pharetra ante nec sollicitudin imperdiet.</p>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius aliquam augue. Aliquam fermentum ante eget ante dictum, sit amet venenatis quam pharetra. Cras ipsum justo, suscipit eget enim quis, fringilla bibendum metus. Etiam at quam commodo urna congue faucibus ac ac diam. Vestibulum ipsum nunc, tempus non varius non, volutpat vel nulla. Morbi eget scelerisque diam, sed congue justo. In pharetra ante nec sollicitudin imperdiet.
+        </p>
       </div>
       
-      <div>
-      <p>
-      <button type="button" class="btn btn-primary btn-lg">Download the files</button>
-      </p>
+      <div class="jumbotron">
+        <h2>About</h2>
+        <p>
+      		<img src="..." alt="..." class="img-circle" style="width:100px">
+      	<p>
+      	<p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius aliquam augue. Aliquam fermentum ante eget ante dictum, sit amet venenatis quam pharetra. Cras ipsum justo, suscipit eget enim quis, fringilla bibendum metus. Etiam at quam commodo urna congue faucibus ac ac diam. Vestibulum ipsum nunc, tempus non varius non, volutpat vel nulla. Morbi eget scelerisque diam, sed congue justo. In pharetra ante nec sollicitudin imperdiet.
+        </p>
+	  </div>
+
+      <div class="download">
+      <button type="button" class="btn btn-primary btn-lg center-block">Download the files</button>
       </div>
 
-    </div> <!-- /container -->
+      
+    <!-- End of your content -->
 
+    </div> <!-- /container -->
 
 	<!-- footer -->
     
@@ -105,5 +94,6 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
   </body>
 </html>
