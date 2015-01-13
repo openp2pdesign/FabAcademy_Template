@@ -99,6 +99,26 @@ a:hover {
 	text-decoration: none;
 	color: #005588;
 }</pre>
+
+<pre class="prettyprint linenums">
+for i in members:
+		print ""
+		print "USER:",members[i]
+		print "Loading connections..."
+		followers = load_connections([i], "followers")
+		friends = load_connections([i], "friends")
+
+		# Add edges...
+		print "Building the graph..."
+
+		for f in followers:
+			for k in followers[f]:
+				graph.add_edge(k,f)
+		
+		for f in friends:
+			for k in friends[f]:
+				graph.add_edge(f,k)
+</pre>
       
     <!-- End of your content -->
 
@@ -124,8 +144,10 @@ a:hover {
     <script src="media/jquery-1.9.1.min.js"></script>
     
     <!-- Syntax Highlighter -->
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=desert">
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
     </script>
+    <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
 	<script type="text/javascript">
 	  !function ($) {
 		$(function(){
