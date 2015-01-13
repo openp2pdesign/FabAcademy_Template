@@ -78,8 +78,27 @@
         <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius aliquam augue. Aliquam fermentum ante eget ante dictum, sit amet venenatis quam pharetra. Cras ipsum justo, suscipit eget enim quis, fringilla bibendum metus. Etiam at quam commodo urna congue faucibus ac ac diam. Vestibulum ipsum nunc, tempus non varius non, volutpat vel nulla. Morbi eget scelerisque diam, sed congue justo. In pharetra ante nec sollicitudin imperdiet.
         </p>
+		
       </div>
-
+		
+		<pre class="prettyprint linenums">
+body {
+	text-align: left;
+	padding: 0;
+	margin: 0;
+	background-color: #FFF;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	font-size: 14px;
+        border-top: 5px solid #333;
+}
+a:link, a:visited {
+	color: #0088CC;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+	color: #005588;
+}</pre>
       
     <!-- End of your content -->
 
@@ -103,6 +122,18 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="media/jquery-1.9.1.min.js"></script>
+    
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=desert">
+    </script>
+	<script type="text/javascript">
+	  !function ($) {
+		$(function(){
+		  window.prettyPrint && prettyPrint()   
+		})
+	  }(window.jQuery)
+	</script>
+	
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
