@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Name Surname">
+    <link rel="icon" href="media/favicon.ico">
+
+    <title>Fab Academy 2015 - Name Surname</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+	<script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Load the menu file -->
+    <script>
+	function menu() {
+					  $('#exercises').load("exercises-menu.html");
+					  $('#project').load("project-menu.html");
+					  }
+	</script>
+
+  </head>
+
+  <body onload="menu()">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Name Surname</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+              <ul id="exercises" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+	<!-- Insert your content here below! -->
+
+
+    <h2>Final Project...</h1>
+    
+    <h3>Text</h3>
+	<p>
+	You can set it up with:
+	<pre class="prettyprint linenums">
+	&ltp&gt;
+	Your text here
+	&lt/p&gt;</pre>
+	</p>
+	Result:
+	<p>
+	Your text here
+	</p>
+	
+	<h3>Images</h3>
+	<p>
+	You can set it up with:
+	<pre class="prettyprint linenums">
+	&ltp class="pic&gt;>&ltimg src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg"&gt;
+	&ltlegend&gt;Here's the legend of the picture.&lt/legend&gt;
+	&lt/p&gt;</pre>
+	</p>
+	Result:
+	<p class="pic"><img src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg">
+	<legend>Here's the legend of the picture.</legend>
+	</p>
+     
+	<h3>Code</h3>
+	<p>
+	You can set it up with:
+	<pre class="prettyprint linenums">
+	&ltpre class="prettyprint linenums"&gt;
+	Your code here
+	&lt/pre&gt;</pre>
+	
+	Result:
+	<pre class="prettyprint linenums">
+	for i in members:
+		print ""
+		print "USER:",members[i]
+		print "Loading connections..."
+		followers = load_connections([i], "followers")
+		friends = load_connections([i], "friends")
+
+		# Add edges...
+		print "Building the graph..."
+
+		for f in followers:
+			for k in followers[f]:
+				graph.add_edge(k,f)
+	
+		for f in friends:
+			for k in friends[f]:
+				graph.add_edge(f,k)</pre>
+	</p>
+	
+	<h3>3D Model</h3>
+	<p>	
+	Add it with:
+	<pre class="prettyprint linenums">
+	&ltcanvas id="cv" width=640 height=480&gt;
+	It seems you are using an outdated browser that does not support canvas :-(
+	&lt/canvas&gt;
+	&ltscript type="text/javascript"&gt;
+		var canvas = document.getElementById('cv');
+		var viewer = new JSC3D.Viewer(canvas);
+		viewer.setParameter('SceneUrl','media/monkey.stl');
+		viewer.setParameter('ModelColor','#CAA618');
+		viewer.setParameter('BackgroundColor1','#E5D7BA');
+		viewer.setParameter('BackgroundColor2','#383840');
+		viewer.setParameter('RenderMode','flat');
+		viewer.setParameter('MipMapping','on');
+		viewer.setParameter('Definition','high');
+		viewer.setParameter('Renderer','webgl');
+		viewer.init();
+		viewer.update();
+	&lt/script&gt;</pre>
+	
+	You can set up the path to the 3D model (.stl/.obj) within this line:
+	<pre class="prettyprint linenums">
+	viewer.setParameter('SceneUrl','media/monkey.stl');</pre>
+	
+	Result:
+	<canvas id="cv" width=640 height=480>
+	It seems you are using an outdated browser that does not support canvas :-(
+	</canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById('cv');
+		var viewer = new JSC3D.Viewer(canvas);
+		viewer.setParameter('SceneUrl','media/monkey.stl');
+		viewer.setParameter('ModelColor','#CAA618');
+		viewer.setParameter('BackgroundColor1','#E5D7BA');
+		viewer.setParameter('BackgroundColor2','#383840');
+		viewer.setParameter('RenderMode','flat');
+		viewer.setParameter('MipMapping','on');
+		viewer.setParameter('Definition','high');
+		viewer.setParameter('Renderer','webgl');
+		viewer.init();
+		viewer.update();
+	</script> 
+    </p> 
+    
+    <h3>Download</h3>
+	<p>
+	You can set up a button for files to be downloaded with:
+	<pre class="prettyprint linenums">
+	&lta href="#"&gt;
+	&ltbutton type="button" class="btn btn-primary btn-lg">Download the file&lt/button&gt;
+	&lt/a&gt;</pre>
+	</p>
+	
+	<p>
+	Result:
+	</p>
+	<p>
+	<a href="#">
+	<button type="button" class="btn btn-primary btn-lg">Download the file</button>
+	</a>
+	</p>
+      
+    <!-- End of your content -->
+
+    </div> <!-- /container -->
+
+	<!-- footer -->
+    
+    <footer id="footer">
+        <p class="license">
+        <!-- Replace the following line with your license http://creativecommons.org/choose/ -->
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+        </p>
+        <p class="license">
+        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
+        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for Google Code Prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>.
+        </p>
+    </footer>
+    
+
+	<!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js"></script>
+    
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
+    </script>
+    <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript">
+	  !function ($) {
+		$(function(){
+		  window.prettyPrint && prettyPrint()   
+		})
+	  }(window.jQuery)
+	</script>
+	
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+  </body>
+</html>
