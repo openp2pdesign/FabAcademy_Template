@@ -15,6 +15,12 @@
 
     <!-- Custom styles for this template -->
     <link href="media/fabacademy.css" rel="stylesheet">
+    
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+	<script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -80,45 +86,25 @@
         </p>
 		
       </div>
+      
+      <div class="row">
+        <div class="col-lg-4">
+          <h2>About</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-primary" href="#" role="button">View more &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h2>My lab</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-primary" href="#" role="button">View more &raquo;</a></p>
+       </div>
+        <div class="col-lg-4">
+          <h2>Final Project</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+          <p><a class="btn btn-primary" href="#" role="button">View more &raquo;</a></p>
+        </div>
+      </div>
 		
-		<pre class="prettyprint linenums">
-body {
-	text-align: left;
-	padding: 0;
-	margin: 0;
-	background-color: #FFF;
-	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-	font-size: 14px;
-        border-top: 5px solid #333;
-}
-a:link, a:visited {
-	color: #0088CC;
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: none;
-	color: #005588;
-}</pre>
-
-<pre class="prettyprint linenums">
-for i in members:
-		print ""
-		print "USER:",members[i]
-		print "Loading connections..."
-		followers = load_connections([i], "followers")
-		friends = load_connections([i], "friends")
-
-		# Add edges...
-		print "Building the graph..."
-
-		for f in followers:
-			for k in followers[f]:
-				graph.add_edge(k,f)
-		
-		for f in friends:
-			for k in friends[f]:
-				graph.add_edge(f,k)
-</pre>
       
     <!-- End of your content -->
 
