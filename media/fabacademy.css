@@ -1,11 +1,11 @@
 /* Custom CSS */
 
-.license { 
+.license, #cclicense { 
 			font-size: 11px; 
 			text-align: center;
 		 }
 		 
-.license img { 
+.license img, #cclicense { 
 			margin: 10px;
 		 }
 
