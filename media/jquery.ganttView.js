@@ -270,13 +270,7 @@ behavior: {
             	bindBlockClick(div, opts.behavior.onClick); 
         	}
         	
-            if (opts.behavior.resizable) { 
-            	bindBlockResize(div, opts.cellWidth, opts.start, opts.behavior.onResize); 
-        	}
             
-            if (opts.behavior.draggable) { 
-            	bindBlockDrag(div, opts.cellWidth, opts.start, opts.behavior.onDrag); 
-        	}
 		}
 
         function bindBlockClick(div, callback) {

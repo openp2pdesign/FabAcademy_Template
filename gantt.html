@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="media/jquery.ganttView.css" />
 	<title>jQuery Gantt</title>
 </head>
-<body style="padding: 0px; height: 400px;">
+<body style="padding: 0px;">
 
 	<div id="ganttChart"></div>
 	<br/><br/>
@@ -27,15 +27,6 @@
 				behavior: {
 					onClick: function (data) { 
 						var msg = "You clicked on an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
-						$("#eventMessage").text(msg);
-					},
-					onResize: function (data) { 
-						var msg = "You resized an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
-						$("#eventMessage").text(msg);
-					},
-					onDrag: function (data) { 
-						var msg = "You dragged an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
-						$("#eventMessage").text(msg);
 					}
 				}
 			});
